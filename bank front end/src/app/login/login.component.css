@@ -1,0 +1,38 @@
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+#head {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-financial-financing-financial-business-investment-time-is-money-image_255525.jpg");
+            color: yellow;
+            text-shadow: -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000;
+            background-size: auto;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            height: 100px;
+            padding: 30px;
+
+        }
+
+    
+    #signinbox {
+            margin-top: 100px;
+            background-color: #bdffc0;
+            width: auto;
+            height: 300px;
+            
+        }
+
+        #signinbox div {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        .col-6 {
+            margin-top: 13%;
+        }
+        .error{
+            color: red;
+            font-size: 12px;
+            text-align:left;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+       

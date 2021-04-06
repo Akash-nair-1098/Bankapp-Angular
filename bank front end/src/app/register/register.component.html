@@ -1,0 +1,27 @@
+<div class="container">
+    <form [formGroup]="register" (ngSubmit)="register1()">
+        <div>
+            <label for="name">Enter Name:</label>
+            <input type="text" formControlName="name" id="" class="form-control">
+        </div>
+        <div>
+            <label for="password">Enter Password:</label>
+            <input type="password" formControlName="pwd" id="" class="form-control">
+        </div>
+        <div>
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" formControlName="cpwd" id="" class="form-control">
+        </div>
+        <div>
+            <label for="password">Enter a 4 digit number for your account number:</label>
+            <input type="text" maxlength="4" minlength="4" formControlName="accno" id="" class="form-control">
+        </div>
+        <div>
+            <label for="password">Enter Email:</label>
+            <input type="email" formControlName="mail" id="" class="form-control">
+        </div>
+        <div>
+         <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,75 @@
+<div id="head">
+    <h1><b>KERALA SAVINGS BANK</b></h1>
+</div><br>
+<div class="container">
+    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif;text-align: center;color: blueviolet;"><b><u>User
+                Easy Transcations page</u></b></h2>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6"><br>
+            <div style="background-color: #bdffc0;text-align: center;"><label for="" id="hii">Hello {{this.dataservice.currentUser}}! Welcome to Your
+                    Transcation Page...</label></div><br>
+            <div style="background-color: #bdffc0;text-align: center;"><label for="" id="hii">Deposit</label></div><br>
+            <form [formGroup]="deposit" (ngSubmit)="deposit1()">
+                <div><label for="username">Acccount Number:</label>
+                    <input type="text" class="form-control" id="uname" formControlName="accno">
+                    <label for="error">
+                        <div class="error"
+                            *ngIf="(this.deposit.get('accno')?.touched||this.deposit.get('accno')?.dirty)&&this.deposit.get('accno')?.errors">
+                            *Invalid Account Number</div>
+                    </label>
+                </div>
+                <div style="font-size: 10px;text-align:left"><label for="" id="invaliduname"></label></div>
+                <div><label for="password">Password:</label>
+                    <input type="password" class="form-control" id="pwd" formControlName="pswd">
+                    <label for="error">
+                        <div class="error"
+                            *ngIf="(this.deposit.get('pswd')?.touched||this.deposit.get('pswd')?.dirty)&&this.deposit.get('pswd')?.errors">
+                            *Wrong Password</div>
+                    </label>
+                </div>
+                <div style="font-size: 10px;text-align:left"><label for="" id="invalidpwd"></label></div>
+                <div><label for="amount">Amount:</label>
+                    <input type="text" class="form-control" id="amt" formControlName="amount">
+                    <label for="error">
+                        <div class="error"
+                            *ngIf="(this.deposit.get('amount')?.touched||this.deposit.get('amount')?.dirty)&&this.deposit.get('amount')?.errors">
+                            *Enter Amount</div>
+                    </label>
+                </div>
+
+                <br>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-success">Deposit</button>
+
+                </div>
+            </form>
+            <br><br>
+            <form [formGroup]="withdrawal" (ngSubmit)="withdraw()">
+                <div style="background-color: #bdffc0;text-align: center;"><label for="" id="hii">Withdrawal</label>
+                </div>
+                <br>
+                <div><label for="username">Acccount Number:</label>
+                    <input type="text" class="form-control" id="uname" formControlName="accno">
+                </div>
+                <div style="font-size: 10px;text-align:left"><label for="" id="invaliduname"></label></div>
+                <div><label for="password">Password:</label>
+                    <input type="password" class="form-control" id="pwd" formControlName="pswd" >
+                </div>
+                <div style="font-size: 10px;text-align:left"><label for="" id="invalidpwd"></label></div>
+                <div><label for="amount">Amount:</label>
+                    <input type="text" class="form-control" id="amt" formControlName="amount">
+                </div><br>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-danger" >Withdraw</button>
+                </div>
+            </form>
+            <br><br>
+            <div><button type="button" (click)="signout()">Sign Out</button></div>
+        </div>
+
+
+        <div class="col-3"></div>
+    </div>
+</div><br>
+<marquee>Kerala Savings Bank-"Your Money is Safe in Our Hands!"</marquee>
